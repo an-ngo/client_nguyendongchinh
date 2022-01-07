@@ -1,0 +1,23 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="create(f.value)">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label" >Title</label>
+      <input type="email" class="form-control" [(ngModel)]="book.title"
+             id="exampleFormControlInput1" placeholder="title" name="title">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput2" class="form-label" >Author</label>
+      <input type="email" class="form-control" [(ngModel)]="book.author"
+             id="exampleFormControlInput2" placeholder="author" name="author">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+      <textarea class="form-control" [(ngModel)]="book.description"
+                id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <div>
+    <button (click)="backToList()">Back to list</button>
+  </div>
+</div>

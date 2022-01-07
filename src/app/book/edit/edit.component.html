@@ -1,0 +1,13 @@
+<div class="container">
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="addBook(f.value)">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" [(ngModel)]="book.title">
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author" [(ngModel)]="book.author">
+    <label for="description">Description</label><br>
+    <textarea type="text" name="description" id="description" [(ngModel)]="book.description"></textarea>
+    <button type="submit">Submit</button>
+    <br>
+    <a href="/list">Back to list</a>
+  </form>
+</div>
